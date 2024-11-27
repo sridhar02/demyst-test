@@ -1,0 +1,3 @@
+## Frontend of the application
+
+Note: I have not implemented test cases for the React components in this project. The project is set up using Vite, which is better suited for testing with Vitest rather than Jest. However, as I'm not familiar with Vitest and don't have the time to explore the differences between Vitest and Jest at the moment, I've decided to defer the implementation of component tests. This allows us to focus on completing the functionality of the application without worrying about the testing aspect.

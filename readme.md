@@ -13,7 +13,7 @@ A small project to demonstrate how to use the Xero API to fetch the Balance Shee
 
 ## Environment Variables
 
-To run this project, you will need to add the environment variables from `env-example` to `.env`  
+To run this project, you will need to add the environment variables from `env-example` to `.env` in both the frontend and backend folders.
 
 ```sh
 cp env-example .env
