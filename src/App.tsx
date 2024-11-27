@@ -46,10 +46,10 @@ function App() {
         <div className="flex justify-center text-xl p-3">Loading...</div>
       )}
       {!isLoading && (
-        <div className="flex flex-col">
-          <div className="flex items-center gap-2 text-xl p-2 w-full justify-center bg-blue-500 text-white">
-            Xero {reportData?.ReportName}
-            <span>({reportData?.ReportDate})</span>
+        <div className="container mx-auto p-6 shadow-lg rounded-lg bg-white">
+          <div className="mx-2">
+            <div className="text-xl">{reportData?.ReportName}</div>
+            <div className="text-lg">{reportData?.ReportDate}</div>
           </div>
           <BalanceSheetTable balanceData={reportData} />
         </div>

@@ -13,6 +13,7 @@ export interface Section {
   RowType: string;
   Title?: string;
   Rows: Row[];
+  Cells?: Cell[];
 }
 
 export interface Report {
