@@ -46,7 +46,7 @@ function App() {
         <div className="flex justify-center text-xl p-3">Loading...</div>
       )}
       {!isLoading && (
-        <div className="container mx-auto p-6 shadow-lg rounded-lg bg-white">
+        <div className="container mx-auto p-6 shadow-lg rounded-lg bg-white my-4">
           <div className="mx-2">
             <div className="text-xl">{reportData?.ReportName}</div>
             <div className="text-lg">{reportData?.ReportDate}</div>
