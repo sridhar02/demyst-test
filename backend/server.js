@@ -7,6 +7,7 @@ const cors = require("cors");
 const app = express();
 
 const PORT = process.env.PORT || 4001;
+const API_URL = process.env.API_URL || "http://localhost:3000";
 
 app.use(express.json());
 app.use(cors());
@@ -14,7 +15,7 @@ app.use(morgan("dev"));
 
 app.get("/api/reports/balancesheet", async (req, res) => {
   try {
-    const xeroAPI = "http://localhost:3000/api.xro/2.0/reports/balancesheet";
+    const xeroAPI = `${API_URL}/api.xro/2.0/reports/balancesheet`;
 
     const response = await axios.get(xeroAPI);
 
