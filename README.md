@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+# Show Me The Money
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The goal of the project is to build a simple one page application to display the Balance Sheet Report from [Xero](https://www.xero.com/au/).
 
-Currently, two official plugins are available:
+Please read through the API documentation at https://developer.xero.com/documentation/api/accounting/reports#balance-sheet.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Use mock Xero Balance Sheet API docker image available at https://hub.docker.com/r/jaypeng2015/show-me-the-money.
 
-## Expanding the ESLint configuration
+The Server runs on http with port 3000, and the api path is `/api.xro/2.0/Reports/BalanceSheet` once you have it running.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The system should consist of the following:
 
-- Configure the top-level `parserOptions` property like this:
+- Backend - Any typed Language (except Java)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+  - Assume that the authentication with Xero is already done.
+  - Provide API endpoint to get data from Xero API for the frontend to use.
+  - Consider error handling.
+  - Consider unit tests.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Frontend - Typescript + React
+  - Display the results in a table based on the data structure return from Xero.
+  - Consider unit tests.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Consider containerise your solution.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Judging Criteria
+
+- Engineering principles & standards
+- System extensibility & Scalability
+- Testability
+- Brevity and Simplicity
+
+## FAQ
+
+### What is the time limit on the exercise?
+
+There is none, ensure you submit your best attempt and as soon as you possibly can.
+
+### How to submit?
+
+Submit a GitHub / Bitbucket repo for review. No ZIP files!
